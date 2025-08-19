@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcia Elías y Luis Elvira</title>
+    <meta name="description" content="Llego el momento de unir nuestro amor por siempre">
+    <meta property="og:url" content="https://modeloblackandwhite.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nos Casamos">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preload" href="/images/envelope.png" as="image">
+    <link rel="preload" href="/images/V12.jpeg" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://kit.fontawesome.com/3c219a0781.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head> 
+<body>
+    <div style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <i class="fas fa-play"></i>
+        <i class="fas fa-pause"></i>
+    </div>    
+<div class="main-content">
+    <!-- Sección de sobre -->
+    <div id="envelope">
+        <div id="envelope-top"></div>
+        <div id="seal" onclick="openEnvelopeAndPlayMusic()">
+            <h2 class="fade-in-element">M | E</h2>
+        </div>
+        <div id="envelope-bottom"></div>
+    </div>
+    <!-- Sección de invitación -->
+    <div id="invitation" class="hidden">
+          <div class="photo-section fade-in-element">
+             <div class="photo-container">
+                 <img src="/images/V12.jpeg" alt="Foto de la pareja" class="photo fade-in-element fade-in-element" loading="lazy">
+             </div>
+                <div class="photo-text">
+                 <h1>Marcia Elías y Luis Elvira</h1>
+                 <h2>07. 03 . 2026</h2>
+               </div>
+          </div> 
+        <div class="contenedor-play">
+            <h1 class="texto-play fade-in-element fade-in-element">Die with a smile - Lady Gaga & Bruno Mars</h1>
+            <div id="playPauseButton" class="icono-contenedor fade-in-element fade-in-element">
+                <i id="iconoPlayPause" class="fas fa-play" aria-hidden="true"></i>
+            </div>
+            <audio id="audioPlayer" src="/music/diewithasmile.mp3"></audio>
+            <div class="progress-container">
+                <input id="progress-bar" type="range" value="0" min="0" max="100" step="1">
+                <div class="time-display">
+                    <span id="current-time">0:00</span> / <span id="duration-time">0:00</span>
+                </div>
+            </div>            
+        </div>               
+         <div class="content">
+            <div class="photo-section fade-in-element fade-in-element">
+                <div class="photo-container">
+                    <img src="/images/V9.jpeg" alt="Foto de la pareja" class="photo fade-in-element fade-in-element">
+                </div>
+                      <div class="photo-text fade-in-element fade-in-element">
+                          <h3 class="title">¡Nos casamos!</h3>
+                          <p>El día en que nuestros corazones se unen para siempre ha llegado. Compartan nuestra alegría en nuestra boda.</p>
+                          <div class="countdown fade-in-element fade-in-element">
+                              <div class="unit">
+                                 <span id="days" class="number">00</span>
+                                 <span class="label">Días</span>
+                              </div>
+                               <div class="unit">
+                                 <span id="hours" class="number">00</span>
+                                 <span class="label">Horas</span>
+                              </div>
+                             <div class="unit">
+                                 <span id="minutes" class="number">00</span>
+                                 <span class="label">Minutos</span>
+                             </div>
+                             <div class="unit">
+                                 <span id="seconds" class="number">00</span>
+                                 <span class="label">Segundos</span>
+                             </div>
+                         </div>                    
+                      </div>
+                 </div>
+            </div>
+                    <div class="guest-section fade-in-element fade-in-element">
+                      <p id="guest-name" class="fade-in-element"></p>
+                   </div>
+            <div class="invitation-info-section fade-in-element fade-in-element">
+                <p>Invitación válida por <span id="passes"></span> <i class="fa-solid fa-ticket"></i> </p>
+            </div>
+            <div class="itinerary-section fade-in-element fade-in-element">
+                <div class="itinerary-item">
+                    <lord-icon 
+                     src="https://cdn.lordicon.com/hingizjn.json" 
+                     trigger="loop" 
+                     element="2000" 
+                     stroke="light" 
+                     colors="primary:#000,secondary:#556B2F" 
+                     class="lord-icon-style"
+                     ></lord-icon>
+                    <h2>Ceremonia</h2>
+                    <p>Yeguada La Estancia</p>
+                    <div class="itinerary-details">
+                        <div class="time-location">
+                            <span class="date">7 Marzo</span>
+                            <span class="separator">|</span>
+                            <span class="time">15:30 hrs</span>
+                        </div>
+                        <p class="location">Monjas, Jalapa </p>
+                        <button type="button"  class="directions-button" onclick="location.href='https://maps.app.goo.gl/eKwaUd65bjZWkXBM9'">CÓMO LLEGAR</button>
+                    </div>
+                </div>
+                <div class="itinerary-item">
+                    <lord-icon 
+                     src="https://cdn.lordicon.com/lhzhnixi.json" 
+                     trigger="loop" 
+                     stroke="light" 
+                     colors="primary:#000000,secondary:#556B2F" 
+                     class="lord-icon-style"
+                     ></lord-icon>
+                    <h2>Recepción</h2>
+                    <p>Yeguada La Estancia</p>
+                    <div class="itinerary-details">
+                        <div class="time-location">
+                            <span class="date">7 Marzo</span>
+                            <span class="separator">|</span>
+                            <span class="time">17:00 hrs</span>
+                        </div>
+                        <p class="location">Monjas, Jalapa</p>
+                        <button class="directions-button" onclick="location.href='https://maps.app.goo.gl/eKwaUd65bjZWkXBM9'">CÓMO LLEGAR</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gifts-section fade-in-element fade-in-element">
+                <h2>Lluvia de Sobres</h2>
+                <lord-icon 
+                 src="https://cdn.lordicon.com/ibydboev.json" 
+                 trigger="loop" 
+                 stroke="light" 
+                 colors="primary:#000,secondary:#556B2F" 
+                 class="lord-icon-style"
+                 ></lord-icon>
+                <p>Lo que más queremos es compartir contigo nuestro gran día, pero agradecemos mucho el gesto de un obsequio. Tendremos un cofre en la entrada para que puedas dejar tu sobre con efectivo. Si prefieres hacer una transferencia, aquí te dejamos los detalles</p>
+                <div class="container">
+                    <button onclick="toggleDetails()">Ver datos de cuenta</button>
+                    <div class="details" id="accountDetails">
+                        <p><strong>Banco:</strong> Banco del Universo</p>
+                        <p><strong>Cuenta a nombre de:</strong> Emilia Franco Galgo</p>
+                        <p><strong>Número de cuenta:</strong> 0011771230</p>
+                        <p><strong>Tipo de cuenta:</strong> Monetaria</p>
+                    </div>
+                </div>
+                <p>¡Gracias!</p>
+            </div>
+            <div class="playlist-section fade-in-element fade-in-element">
+                <h2>Playlist</h2>
+                <lord-icon 
+                 src="https://cdn.lordicon.com/vvlnxtgv.json" 
+                 trigger="loop" 
+                 stroke="light" 
+                 colors="primary:#000000,secondary:#556B2F" 
+                 class="lord-icon-style"
+                 ></lord-icon>
+                <p>Nos encantaría que nos sugieras esas canciones que sabes que son geniales y no pueden faltar en nuestra boda.</p>
+                <button onclick="window.location.href='https://open.spotify.com/playlist/1SeD8rZLzax57hSCP5hIPL?si=94ee8b9002624aa5&pt=5bfa19ed895d716f06c1289ba5886711'">ABRIR PLAYLIST EN SPOTIFY</button>
+            </div>
+            <div class="dresscode-section fade-in-element fade-in-element">
+                <h2>Dress Code</h2>
+                <lord-icon
+                 src="https://cdn.lordicon.com/okgbpdra.json"
+                 trigger="loop"
+                 stroke="light"
+                 colors="primary:#000000,secondary:#556B2F"
+                 class="lord-icon-style"
+                ></lord-icon>
+                <p>Formal, colores a evitar: Mujeres blanco, Beige y Verde. Hombres: no llevar traje negro</p>
+            </div>   
+            <div class="gallery-section fade-in-element fade-in-element">
+                <h2>Galería de fotos</h2>
+            
+                <!-- Checkbox oculto que controla la visibilidad del modal -->
+                <input type="checkbox" id="toggle-modal" class="hidden-checkbox">
+            
+                <!-- Modal de fotos -->
+                <div id="photo-modal" class="modal">
+                    <!-- Label para cerrar el modal -->
+                    <label for="toggle-modal" class="close">&times;</label>
+                    <img class="modal-content" id="main-photo-modal" alt="modal">
+                </div> 
+            
+                <!-- Galería principal -->
+                <div class="gallery-main fade-in-element">
+                    <!-- Al hacer clic en la imagen principal, se abre el modal -->
+                    <label for="toggle-modal">
+                        <img id="main-photo" src="/images/V1.jpeg" alt="Foto principal" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                </div>
+            
+                <!-- Miniaturas de la galería -->
+                <div class="gallery-thumbs fade-in-element">
+                    <!-- Cada miniatura también actúa como disparador del modal -->
+                    <label for="toggle-modal">
+                        <img src="images/V1.jpeg"Foto 1" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/H1.jpeg" alt="Foto 2" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/H3.jpeg" alt="Foto 3" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/V2.jpeg" alt="Foto 4" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/V3.jpeg" alt="Foto 5" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/V4.jpeg" alt="Foto 6" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/V5.jpeg" alt="Foto 7" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/V6.jpeg" alt="Foto 8" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/V8.jpeg" alt="Foto 9" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/V10.jpeg" alt="Foto 10" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/V11.jpeg" alt="Foto 11" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                </div>
+            </div>
+            <div class="wishes-section fade-in-element fade-in-element">
+                <h2>Buenos deseos</h2>
+                <button  type="button" onclick="toggleWishes()">VER BUENOS DESEOS</button>
+                <div id="wishes" class="hidden">
+                    <!-- Aquí se mostrarán los buenos deseos -->
+                </div>
+                <button type="button" onclick="toggleWishForm()">ENVIAR BUENOS DESEOS</button>
+                <div id="wish-form" class="hidden">
+                    <h3>Enviar Buenos Deseos</h3>
+                    <label for="wish-name">Nombre:</label>
+                    <input type="text" id="wish-name">
+                    <label for="wish-message">Mensaje de buenos deseos:</label>
+                    <textarea id="wish-message"></textarea>
+                    <button onclick="submitWish()">Enviar</button>
+                </div>
+            </div>
+            <div class="album-section fade-in-element">
+                <h2>¡Hagamos los recuerdos inolvidables!</h2>
+                <h1 class="hashtag">#noscasamosmarcia&luis</h1>
+                <div class="qr-container">
+                    <div id="qrCode"></div>
+                    <img src="/images/QR-ALBUMDEFOTOS.png" alt="Escane el QR" width="400">
+                    <p>Escanea el código QR o usa el botón para subir tus fotos</p>
+                    <a class="upload-btn" href="https://drive.google.com/drive/folders/1Fp0t_SmKJ9N1mRKHUNQrJTGZoTwYt6FV?usp=drive_link" target="_blank">SUBIR FOTOS</a>
+                </div>
+            </div>
+            <div class="rsvp-section fade-in-element fade-in-element">
+                <h2>Confirmación</h2>
+                <lord-icon 
+                 src="https://cdn.lordicon.com/wzwygmng.json" 
+                 trigger="loop" 
+                 stroke="light"  
+                 colors="primary:#000000,secondary:#556B2F" 
+                 class="lord-icon-style"
+                 ></lord-icon>
+                <p>Para nosotros es muy importante que confirmes tu asistencia antes del 15 de Marzo, o bien indicarnos si no podrás acompañarnos.</p>
+                <button type="button"  onclick="location.href='https://wa.me/50236011737?text='">CONFIRMA TU ASISTENCIA</button>
+            </div>
+            <div class="photo-full fade-in-element fade-in-element">
+                <img src="/images/V7.jpeg" alt="Foto de la pareja" loading="lazy">
+            </div>
+            <div class="banner-section fade-in-element fade-in-element1">
+                <p>"Este es nuestro inicio eterno".</p>
+            </div>
+            <footer class="fade-in-element fade-in-element">
+                <div class="social-icons">
+                    <a href="https://wa.me/50236011737" aria-label="Whatsapp"><i class="fab fa-whatsapp fade-in-element"></i></a>
+                    <a href="https://www.facebook.com/thetwodesign?mibextid=ZbWKwl" aria-label="Facebook"><i class="fab fa-facebook fade-in-element"></i></a>
+                    <a href="https://www.instagram.com/thetwodesign?igsh=M2k5eWF4dHl3czNv" aria-label="Instagram"><i class="fab fa-instagram fade-in-element"></i></a>
+                </div>
+                <div class="logo fade-in-element">
+                    <img src="/images/2.png" alt="Logo de la empresa">
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+    <script type="module" src="/database.js" defer></script>
+    <script src="/script.js" defer></script>
+    <script type="module" src="/loads.js" defer></script>
+</body>
+</html>
