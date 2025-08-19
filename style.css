@@ -198,8 +198,8 @@ html, body {
     font-size: 55px;
     margin: 0;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
-    background: linear-gradient(to right, #000000, #1a1a1a, #2c2c2c, #1a1a1a, #000000); 
-    -webkit-background-clip: text; 
+    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #e6e6e6, #c0c0c0, #a8a8a8);
+    -webkit-background-clip: text;
     color: transparent;
 }
 .invitation-info-section {
