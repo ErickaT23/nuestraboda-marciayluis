@@ -11,6 +11,7 @@ body {
     height: 100%;
     position: relative;
     min-height: 100vh;
+    background-color: black;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Great Vibes', serif;
@@ -44,24 +45,31 @@ html, body {
     z-index: 10;
     overflow-x: hidden;
   }  
-#envelope-top, #envelope-bottom {
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-        background-image: url('/images/envelope.png');
-        background-size: cover; /* Ajusta la imagen para que cubra el área */
-        background-position: center; /* Centra la imagen */
-        box-shadow: 0 4px 8px rgba(216, 198, 181, 0.5), 0 6px 20px rgba(216, 198, 181, 0.3);
+  #envelope-top, #envelope-bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    background-size: cover; /* Ajusta la imagen para que cubra el área */
+    background-position: center; /* Centra la imagen */
+    box-shadow: 0 4px 8px rgba(137, 179, 144, 0.619),
+                0 6px 20px rgba(149, 178, 156, 0.478);
 }
+#envelope-top, #envelope-bottom {
+    transition: transform .6s ease-in-out, opacity .6s ease-in-out; /* antes tenías 1s */
+  }  
 #envelope-top {
     top: 0;
     border-bottom: none;
+    background-image: url('/images/181.png'); /* Imagen parte superior */
 }
+
 #envelope-bottom {
     bottom: 0;
     border-top: none;
+    background-image: url('/images/182.png'); /* Imagen parte inferior */
 }
+
 #seal {
     position: absolute;
     top: 50%;
@@ -69,7 +77,7 @@ html, body {
     transform: translate(-50%, -50%);
     width: 160px;
     height: 160px;
-    background: white;
+    background: #374d34;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.216);
     border-radius: 50%;
     display: flex;
@@ -84,7 +92,7 @@ html, body {
     font-size: 48px;
     font-family: Garamond, serif;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #e6e6e6, #c0c0c0, #a8a8a8);
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -190,7 +198,7 @@ html, body {
     }
 }
 .guest-section{
-    background-color: #556b2fbd;
+    background-color: #2c2c2c;
     text-align: center;
     padding: 25px 0 25px;
 }
@@ -198,25 +206,24 @@ html, body {
     font-size: 55px;
     margin: 0;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
-    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #e6e6e6, #c0c0c0, #a8a8a8);
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
     -webkit-background-clip: text;
     color: transparent;
 }
 .invitation-info-section {
     position: relative;
-    background-color: #2c2c2c;
+    background-color: #374d34;
     text-align: center;
     padding: 15px 0 15px;
 }
 .invitation-info-section p {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #e6e6e6, #c0c0c0, #a8a8a8);
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 55px;
 }
 .dresscode-section, .wishes-section, .gallery-section, .playlist-section, .rsvp-section, .nochild-section{
-    background-color: white;
     padding: 20px 0 30px;
     margin: 0;
     text-align: center;
@@ -226,7 +233,7 @@ html, body {
     margin-bottom: 50px;
     text-transform: initial;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #e6e6e6, #c0c0c0, #a8a8a8);
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -236,7 +243,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('/images/div-play.png'); /* Ruta a tu imagen de fondo */
+    background-image: url('/images/183.png'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -251,13 +258,13 @@ html, body {
 }
 .contenedor-play .fa-play, .contenedor-play .fa-pause, .contenedor-play h1, .contenedor-play h2, .album-section h1, .album-section h2{
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #e6e6e6, #c0c0c0, #a8a8a8);
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
     -webkit-background-clip: text;
     color: transparent;
 }
 .hashtag h1{
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #e6e6e6, #c0c0c0, #a8a8a8);
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -297,12 +304,11 @@ html, body {
 .time-display {
     font-size: 65px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #e6e6e6, #c0c0c0, #a8a8a8);
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
     -webkit-background-clip: text;
     color: transparent;
 }
 .itinerary-section {
-    background-color: white;
     padding: 20px;
     margin: 0;
     text-align: center;
@@ -312,6 +318,11 @@ html, body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
+}
+.itinerary-item p{
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .itinerary-details {
     text-align: center;
@@ -324,37 +335,46 @@ html, body {
 }
 .time-location .date {
     font-size: 80px;
-    color: black;
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .time-location .separator {
     margin: 0 10px;
     font-size: 80px;
-    color: black;
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .time-location .time {
     font-size: 80px;
-    color: black;
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .location {
     font-size: 80px;
-    color: black;
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
     margin: 10px 0;
 }
 .gifts-section h2, .gallery-section h2{
     font-size: 110px;
     margin-bottom: 50px;
     text-transform: initial;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2),  
     0 0 30px rgba(255, 255, 255, 0.1); 
-    background: linear-gradient(to right, #a8a8a8, #c0c0c0, #a9c3a9, #c0c0c0, #a8a8a8);
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
     -webkit-background-clip: text;
     color: transparent;
 }
 .gifts-section p{
     font-size: 80px;
-    color: black;
     margin: 10px;
     cursor: pointer;
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .container {
     max-width: 400px;
@@ -367,20 +387,24 @@ html, body {
     display: none;
     margin-top: 15px;
     text-align: left;
-    background: #fff;
+    background: black;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-.dresscode-section p, .playlist-section p, .rsvp-section p, .nochild-section p{
+.dresscode-section p, .playlist-section p, .rsvp-section p, .album-section p{
     margin: 10px 0;
     font-size: 80px;
-    color: black;
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .gifts-section, .gallery-section{
-    background-color: #556b2f29;
     text-align: center;
     padding: 10px 0 30px;
+}
+.gifts-section, .gallery-section, .album-section{
+    background-color: #374d3472;
 }
 .dresscode-section .icons {
     display: flex;
@@ -401,7 +425,7 @@ html, body {
     border-radius: 100%;
     margin: 0;
     padding: 5px 10px;
-    background-color: #556b2fbd;
+    background-color: #374d34;
     border: solid 1px white;
     text-align: center;
     display: flex;
@@ -420,31 +444,49 @@ html, body {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     text-align: center;
 }
-.directions-button, .wishes-section button, .rsvp-section button, .playlist-section button, .filter-section button, .gifts-section button{  
+.directions-button, .wishes-section button, .rsvp-section button, .playlist-section button, .filter-section button, .gifts-section button, .upload-btn{  
     padding: 10px 20px;
     margin-top: 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;   
     font-size: 40px;
-    background-color: #556B2F; /* Un solo tono dorado clásico */
+    background-color: #374d34; /* Un solo tono dorado clásico */
     color: white;   
     transition: background-color 0.3s, box-shadow 0.3s;  
     font-weight: 200;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra alrededor de la imagen */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: oblique;
 }
-.wishes-section button:hover, .directions-button:hover, .rsvp-section button:hover, .playlist-section button:hover, .filter-section button:hover, .gifts-section button:hover{
-    background-color: black;
+.wishes-section button:hover, .directions-button:hover, .rsvp-section button:hover, .playlist-section button:hover, .filter-section button:hover, .gifts-section button:hover, .upload-btn:hover{
+    background-color: white;
+    color: #374d34;
+}
+#wishes{
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9, #b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 #wish-form {
     margin-top: 20px;
     text-align: left;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #wish-form h3 {
     font-size: 90px;
     margin-bottom: 10px;
     text-transform: initial;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9, #b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 #wish-form label {
     font-size: 60px;
@@ -508,7 +550,7 @@ html, body {
     transform: translate(-50%, -50%);
     width: 950px; 
     height: 990px; 
-    background-color: #ffffffa1; 
+    background-color: #374d346e; 
     z-index: 1000;
     padding: 20px;
     box-sizing: border-box;
@@ -524,7 +566,7 @@ html, body {
     position: absolute;
     top: 50px;
     right: 20px;
-    color: black;
+    color: #374d34;
     font-size: 85px;
     cursor: pointer;
 }
@@ -537,7 +579,7 @@ html, body {
     display: block;
 }
 .banner-section {
-    background-color: #556b2fbd;
+    background-color: #374d34bd;
     text-align: center;
     padding: 10px 0;
     margin-top: 0;
@@ -563,7 +605,7 @@ footer .social-icons a {
     transition: color 0.3s;
 }
 footer .social-icons a:hover {
-    color: #b29a68;
+    color: #374d34;
 }
 footer .logo img {
     width: 100px;
@@ -589,23 +631,6 @@ footer .logo img {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.upload-btn{
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;   
-    font-size: 40px;
-    background-color: #556B2F; /* Un solo tono dorado clásico */
-    color: white;   
-    transition: background-color 0.3s, box-shadow 0.3s;  
-    font-weight: 200;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra alrededor de la imagen */
-    text-decoration: none;
-}
-.upload-btn:hover {
-    background-color: black;
 }
 @media (max-width: 768px) {
     .main-content {

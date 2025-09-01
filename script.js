@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() {
             envelope.classList.add('hidden');
             invitation.classList.remove('hidden');
-        }, 1000);
+          }, 600); // antes 1000
+          
       
         audio.play().then(function() {
             iconoPlayPause.classList.remove("fa-play");
@@ -138,50 +139,83 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Optimización visual
     document.querySelector(".title").classList.add("visible");
-
-    // Buenos deseos
-    function displayWishes() {
-        const wishesDiv = document.getElementById('wishes');
-        wishesDiv.innerHTML = wishes.map(wish => `<p><strong>${wish.name}:</strong> ${wish.message}</p>`).join('');
-    }
-
-    function toggleWishForm() {
-        document.getElementById('wish-form').classList.toggle('hidden');
-    }
-
-    function toggleWishes() {
-        const wishesDiv = document.getElementById('wishes');
-        wishesDiv.classList.toggle('hidden');
-      }      
-
-      window.toggleWishes = toggleWishes;
-
-
-    window.changePhoto = function(element) {
-        const mainPhotoModal = document.getElementById('main-photo');
-        const mainPhoto = document.getElementById('main-photo-modal');
-        mainPhoto.src = element.src;
-        mainPhotoModal.src = element.src;
-        if (element !== mainPhoto) {
-            openModal();
-        }
-    }
-
-    function openModal() {
-        document.getElementById('photo-modal').style.display = 'block';
-    }
-
-    function closeModal() {
-        document.getElementById('photo-modal').style.display = 'none';
-    }
-
-    window.toggleDetails = function() {
-        var details = document.getElementById("accountDetails");
-        details.style.display = (details.style.display === "none" || details.style.display === "") ? "block" : "none";
-    }
-
-    window.submitWish = submitWish;
-    window.toggleWishForm = toggleWishForm;
-    window.toggleWishes = toggleWishes;
 });
 
+//wishes.js
+// script.js
+(() => {
+    const $ = (sel) => document.querySelector(sel);
+  
+    function setFormVisibility(show) {
+      const form = document.getElementById('wish-form');
+      if (!form) return;
+  
+      if (show) {
+        form.classList.remove('hidden');
+        form.style.display = '';          // resetea inline
+      } else {
+        form.classList.add('hidden');
+        form.style.display = 'none';      // fuerza oculto (por si algún estilo gana)
+      }
+  
+      // Actualizar texto del botón
+      const btn = $('.wishes-section button[onclick="toggleWishForm()"]');
+      if (btn) btn.textContent = show ? 'OCULTAR FORMULARIO' : 'ENVIAR BUENOS DESEOS';
+    }
+  
+    function toggleWishForm() {
+      const form = document.getElementById('wish-form');
+      if (!form) return;
+  
+      // Determinar estado actual de forma confiable
+      const currentlyHidden = form.classList.contains('hidden') || getComputedStyle(form).display === 'none';
+      setFormVisibility(currentlyHidden); // si está oculto => mostrar; si está visible => ocultar
+    }
+  
+    function toggleWishes() {
+      const wishesDiv = document.getElementById('wishes');
+      if (!wishesDiv) return;
+  
+      const willShow = wishesDiv.classList.contains('hidden') || getComputedStyle(wishesDiv).display === 'none';
+      if (willShow) {
+        wishesDiv.classList.remove('hidden');
+        wishesDiv.style.display = '';
+      } else {
+        wishesDiv.classList.add('hidden');
+        wishesDiv.style.display = 'none';
+      }
+  
+      const btn = document.querySelector('.wishes-section button[onclick="toggleWishes()"]');
+      if (btn) btn.textContent = willShow ? 'OCULTAR BUENOS DESEOS' : 'VER BUENOS DESEOS';
+    }
+  
+    // === Mostrar/Ocultar detalles de cuenta ===
+function toggleDetails() {
+    const details = document.getElementById("accountDetails");
+    if (!details) return;
+    const isHidden = details.style.display === "none" || details.style.display === "";
+    details.style.display = isHidden ? "block" : "none";
+  }
+  
+  // Exponer para el onclick del HTML
+  window.toggleDetails = toggleDetails;
+  
+
+    // Exponer para los onclick del HTML
+    window.toggleWishForm = toggleWishForm;
+    window.toggleWishes = toggleWishes;
+  
+    // Estado inicial coherente al cargar
+    window.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('wish-form');
+      setFormVisibility(form ? !form.classList.contains('hidden') && getComputedStyle(form).display !== 'none' : false);
+  
+      const wishesDiv = document.getElementById('wishes');
+      const wishesBtn = document.querySelector('.wishes-section button[onclick="toggleWishes()"]');
+      if (wishesDiv && wishesBtn) {
+        const isHidden = wishesDiv.classList.contains('hidden') || getComputedStyle(wishesDiv).display === 'none';
+        wishesBtn.textContent = isHidden ? 'VER BUENOS DESEOS' : 'OCULTAR BUENOS DESEOS';
+      }
+    });
+  })();
+  
