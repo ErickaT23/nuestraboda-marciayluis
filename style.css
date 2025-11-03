@@ -627,6 +627,13 @@ footer .logo img {
     padding: 20px;
     text-align: center;
 }
+.album-section h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 35px;
+    text-transform: none;
+}
 .qr-container {
     display: flex;
     flex-direction: column;
@@ -692,7 +699,11 @@ footer .logo img {
         font-size: 22px;
         padding: 10px;
     }
-    .story-section h2, .gifts-section h2, .dresscode-section h2, .filter-section h2, .rsvp-section h2, .wishes-section h2, .playlist-section h2, .gallery-section h2, .nochild-section h2, .album-section h1, h2{
+    .nochild p{
+        font-size: 18px;
+        margin-top: -30px;
+    }
+    .story-section h2, .gifts-section h2, .dresscode-section h2, .filter-section h2, .rsvp-section h2, .wishes-section h2, .playlist-section h2, .gallery-section h2, .nochild-section h2, h2{
         font-size: 40px;
         margin-bottom: 10px;
         text-transform: initial;
@@ -900,5 +911,41 @@ footer .logo img {
     footer .logo img{
         width: 120px;
         height: auto;
+    }
+}
+.noalcohol-section {
+    padding: 20px 0 30px;
+    margin: 0;
+    text-align: center;
+}
+
+.noalcohol-section h2 {
+    font-size: 100px;
+    margin-bottom: 40px;
+    text-transform: initial;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9, #b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.noalcohol-section p {
+    font-size: 80px;
+    margin: 10px auto;
+    max-width: 1200px;
+    background: linear-gradient(to right,   #b0b0b0, #d9d9d9, #f2f2f2, #d9d9d9,#b0b0b0);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+@media (max-width: 768px) {
+    .noalcohol-section h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .noalcohol-section p {
+        font-size: 22px;
+        padding: 10px;
     }
 }

@@ -218,4 +218,13 @@ function toggleDetails() {
       }
     });
   })();
+
+  function changePhoto(imgEl) {
+    const src = imgEl.getAttribute('src');
+    const main = document.getElementById('main-photo');
+    const modalImg = document.getElementById('main-photo-modal');
+  
+    if (main) main.src = src;
+    if (modalImg) modalImg.src = src;
+  }
   

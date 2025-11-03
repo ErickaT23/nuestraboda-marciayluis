@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcia Elías y Luis Elvira</title>
-    <meta name="description" content="Llego el momento de unir nuestro amor por siempre">
-    <meta property="og:url" content="https://modeloblackandwhite.netlify.app">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Nos Casamos">
+    <meta property="og:title" content="Nos Casamos Marcia y Luis">
+    <meta property="og:description" content="Llego el momento de unir nuestro amor por siempre">
+    <meta property="og:image" content="https://i.postimg.cc/prkhS4td/2.png">
     <link rel="stylesheet" href="/style.css">
     <link rel="preload" href="/images/envelope.png" as="image">
     <link rel="preload" href="/images/V12.jpeg" as="image">
@@ -37,7 +37,7 @@
     <div id="invitation" class="hidden">
           <div class="photo-section fade-in-element">
              <div class="photo-container">
-                 <img src="/images/V12.jpeg" alt="Foto de la pareja" class="photo fade-in-element fade-in-element" loading="lazy">
+                 <img src="/images/portada.png" alt="Foto de la pareja" class="photo fade-in-element fade-in-element" loading="lazy">
              </div>
                 <div class="photo-text">
                  <h1>Marcia Elías y Luis Elvira</h1>
@@ -45,11 +45,11 @@
                </div>
           </div> 
         <div class="contenedor-play">
-            <h1 class="texto-play fade-in-element fade-in-element">Die with a smile - Lady Gaga & Bruno Mars</h1>
+            <h1 class="texto-play fade-in-element fade-in-element">Por Favor - Humbe</h1>
             <div id="playPauseButton" class="icono-contenedor fade-in-element fade-in-element">
                 <i id="iconoPlayPause" class="fas fa-play" aria-hidden="true"></i>
             </div>
-            <audio id="audioPlayer" src="/music/diewithasmile.mp3"></audio>
+            <audio id="audioPlayer" src="/music/porfavor-humbe.mp3"></audio>
             <div class="progress-container">
                 <input id="progress-bar" type="range" value="0" min="0" max="100" step="1">
                 <div class="time-display">
@@ -60,7 +60,7 @@
          <div class="content">
             <div class="photo-section fade-in-element fade-in-element">
                 <div class="photo-container">
-                    <img src="/images/V9.jpeg" alt="Foto de la pareja" class="photo fade-in-element fade-in-element">
+                    <img src="/images/countdown.jpeg" alt="Foto de la pareja" class="photo fade-in-element fade-in-element">
                 </div>
                       <div class="photo-text fade-in-element fade-in-element">
                           <h3 class="title">¡Nos casamos!</h3>
@@ -90,7 +90,10 @@
                       <p id="guest-name" class="fade-in-element"></p>
                    </div>
             <div class="invitation-info-section fade-in-element fade-in-element">
-                <p>Invitación válida por <span id="passes"></span> <i class="fa-solid fa-ticket"></i> </p>
+                <p>Invitación válida por <span id="passes"></span> <i class="fa-solid fa-ticket"></i></p>
+                <div class="nochild">
+                    <p>Aunque nos encantan los niños, este día estará diseñado solo para adultos</p>
+                </div>
             </div>
             <div class="itinerary-section fade-in-element fade-in-element">
                 <div class="itinerary-item">
@@ -135,6 +138,15 @@
                     </div>
                 </div>
             </div>
+            <div class="noalcohol-section fade-in-element fade-in-element">
+                <h2>Nota importante</h2>
+                <p>
+                    Agradecemos profundamente su presencia en nuestra boda. Con el propósito de garantizar un ambiente cómodo y especial para nosotros, les informamos que no se permitirá el consumo de bebidas alcohólicas dentro ni fuera del evento.
+                </p>
+                <p>
+                    Agradecemos de antemano su comprensión y respeto a esta disposición.
+                </p>
+            </div>
             <div class="gifts-section fade-in-element fade-in-element">
                 <h2>Lluvia de Sobres</h2>
                 <lord-icon 
@@ -144,16 +156,10 @@
                  colors="primary:#A9A9A9,secondary:#D3D3D3" 
                  class="lord-icon-style"
                  ></lord-icon>
-                <p>Lo que más queremos es compartir contigo nuestro gran día, pero agradecemos mucho el gesto de un obsequio. Tendremos un cofre en la entrada para que puedas dejar tu sobre con efectivo. Si prefieres hacer una transferencia, aquí te dejamos los detalles</p>
+                <p>Tu presencia es el mejor obsequio, pero si deseas contribuir con el inicio de nuestro hogar, te lo agradeceremos. Hemos preparado un cofre en el que podrás dejar tu sobre con efectivo, si así lo deseas. También podrás hacerlo a través del siguiente enlace, donde encontrarás la opción de regalarnos un detalle especial.</p>
                 <div class="container">
-                    <button onclick="toggleDetails()">Ver datos de cuenta</button>
-                    <div class="details" id="accountDetails">
-                        <p><strong>Banco:</strong> Banco del Universo</p>
-                        <p><strong>Cuenta a nombre de:</strong> Emilia Franco Galgo</p>
-                        <p><strong>Número de cuenta:</strong> 0011771230</p>
-                        <p><strong>Tipo de cuenta:</strong> Monetaria</p>
-                    </div>
-                </div>
+                    <a href="https://www.cemaco.com/list/BodaMarciayLuis07032026" target="_blank" class="upload-btn">BODA CEMACO</a>
+                </div>                
                 <p>¡Gracias!</p>
             </div>
             <div class="playlist-section fade-in-element fade-in-element">
@@ -166,7 +172,7 @@
                  class="lord-icon-style"
                  ></lord-icon>
                 <p>Nos encantaría que nos sugieras esas canciones que sabes que son geniales y no pueden faltar en nuestra boda.</p>
-                <button onclick="window.location.href='https://open.spotify.com/playlist/1SeD8rZLzax57hSCP5hIPL?si=94ee8b9002624aa5&pt=5bfa19ed895d716f06c1289ba5886711'">ABRIR PLAYLIST EN SPOTIFY</button>
+                <button onclick="window.location.href='https://open.spotify.com/playlist/34YqazZDk619ZA3sOjDM28?si=1tLH8GQZSxiISs0-HOyt4g&pi=N0w-5kURShOtH'">ABRIR PLAYLIST EN SPOTIFY</button>
             </div>
             <div class="dresscode-section fade-in-element fade-in-element">
                 <h2>Dress Code</h2>
@@ -177,7 +183,8 @@
                  colors="primary:#A9A9A9,secondary:#D3D3D3"
                  class="lord-icon-style"
                 ></lord-icon>
-                <p>Formal, colores a evitar: Mujeres blanco, Beige y Verde. Hombres: no llevar traje negro</p>
+                <p>Mujeres: evitar el uso de colores banco, beige y verde.</p>
+                <p>Hombres: se solicita no asistir con traje negro.</p>
             </div>   
             <div class="gallery-section fade-in-element fade-in-element">
                 <h2>Galería de fotos</h2>
@@ -204,37 +211,22 @@
                 <div class="gallery-thumbs fade-in-element">
                     <!-- Cada miniatura también actúa como disparador del modal -->
                     <label for="toggle-modal">
-                        <img src="images/V1.jpeg"Foto 1" onclick="changePhoto(this)" loading="lazy">
+                        <img src="/images/V1.jpeg" alt="Foto 1" onclick="changePhoto(this)" loading="lazy">
                     </label>
                     <label for="toggle-modal">
                         <img src="/images/H1.jpeg" alt="Foto 2" onclick="changePhoto(this)" loading="lazy">
                     </label>
                     <label for="toggle-modal">
-                        <img src="/images/H3.jpeg" alt="Foto 3" onclick="changePhoto(this)" loading="lazy">
+                        <img src="/images/H2.jpeg" alt="Foto 3" onclick="changePhoto(this)" loading="lazy">
                     </label>
                     <label for="toggle-modal">
-                        <img src="/images/V2.jpeg" alt="Foto 4" onclick="changePhoto(this)" loading="lazy">
+                        <img src="/images/foto-color.jpeg" alt="Foto 4" onclick="changePhoto(this)" loading="lazy">
                     </label>
                     <label for="toggle-modal">
-                        <img src="/images/V3.jpeg" alt="Foto 5" onclick="changePhoto(this)" loading="lazy">
+                        <img src="/images/V2.jpeg" alt="Foto 5" onclick="changePhoto(this)" loading="lazy">
                     </label>
                     <label for="toggle-modal">
-                        <img src="/images/V4.jpeg" alt="Foto 6" onclick="changePhoto(this)" loading="lazy">
-                    </label>
-                    <label for="toggle-modal">
-                        <img src="/images/V5.jpeg" alt="Foto 7" onclick="changePhoto(this)" loading="lazy">
-                    </label>
-                    <label for="toggle-modal">
-                        <img src="/images/V6.jpeg" alt="Foto 8" onclick="changePhoto(this)" loading="lazy">
-                    </label>
-                    <label for="toggle-modal">
-                        <img src="/images/V8.jpeg" alt="Foto 9" onclick="changePhoto(this)" loading="lazy">
-                    </label>
-                    <label for="toggle-modal">
-                        <img src="/images/V10.jpeg" alt="Foto 10" onclick="changePhoto(this)" loading="lazy">
-                    </label>
-                    <label for="toggle-modal">
-                        <img src="/images/V11.jpeg" alt="Foto 11" onclick="changePhoto(this)" loading="lazy">
+                        <img src="/images/H3.jpeg" alt="Foto 6" onclick="changePhoto(this)" loading="lazy">
                     </label>
                 </div>
             </div>
@@ -270,7 +262,7 @@
                 colors="primary:#A9A9A9,secondary:#D3D3D3" 
                 class="lord-icon-style"
                 ></lord-icon>
-                <h1 class="hashtag">#noscasamosmarcia&luis</h1>
+                <h1 class="hashtag">#noscasamosmarciayluis</h1>
                 <div class="qr-container">
                     <div id="qrCode"></div>
                     <img src="/images/QR.png" alt="Escane el QR" width="400">
@@ -287,14 +279,14 @@
                  colors="primary:#A9A9A9,secondary:#D3D3D3" 
                  class="lord-icon-style"
                  ></lord-icon>
-                <p>Para nosotros es muy importante que confirmes tu asistencia antes del 29 de diciembre de 2025, o bien indicarnos si no podrás acompañarnos.</p>
+                <p>Para nosotros es de suma importancia contar con su confirmación de asistencia antes del 29 de diciembre del 2025. En caso de no poder acompañarnos, agradeceremos igualmente nos lo haga saber con anticipación.</p>
                 <button type="button"  onclick="location.href='https://wa.me/50236011737?text='">CONFIRMA TU ASISTENCIA</button>
             </div>
             <div class="photo-full fade-in-element fade-in-element">
-                <img src="/images/V7.jpeg" alt="Foto de la pareja" loading="lazy">
+                <img src="/images/foto-final.jpeg" alt="Foto de la pareja" loading="lazy">
             </div>
             <div class="banner-section fade-in-element fade-in-element1">
-                <p>"Este es nuestro inicio eterno".</p>
+                <p>"El primer capítulo de nuestro para siempre".</p>
             </div>
             <footer class="fade-in-element fade-in-element">
                 <div class="social-icons">
