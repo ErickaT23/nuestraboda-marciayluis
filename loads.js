@@ -42,7 +42,7 @@ const guests = [
   { id: "41", name: "Jeffry Contreras y Esposa", passes: 2 },
   { id: "42", name: "Ashley Martínez", passes: 1 },
   { id: "43", name: "Wanda Ramírez", passes: 1 },
-  { id: "44", name: "Julio Chang", passes: 1 },
+  { id: "44", name: "Julia Chang", passes: 1 },
   { id: "45", name: "Otto Elías y Esposa", passes: 2 },
   { id: "46", name: "Otto Rubén Elías Pereira", passes: 1 },
   { id: "47", name: "Pablo Elías Pereira", passes: 1 },
@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
       nameLower.includes("luz") ||
       nameLower.includes("sonia") ||
       nameLower.includes("sahily") ||
+      nameLower.includes("Julia") ||
       nameLower.includes("katerine");
 
     // Texto dinámico según género y cantidad de pases
