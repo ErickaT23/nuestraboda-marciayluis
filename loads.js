@@ -95,42 +95,76 @@ const guests = [
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    function getQueryParams() {
-      const params = {};
-      const queryString = window.location.search.substring(1);
-      const pairs = queryString.split("&");
-      for (const pair of pairs) {
-        const [key, value] = pair.split("=");
-        params[decodeURIComponent(key)] = decodeURIComponent(value.replace(/\+/g, ' '));
-      }
-      return params;
+  function getQueryParams() {
+    const params = {};
+    const queryString = window.location.search.substring(1);
+    const pairs = queryString.split("&");
+    for (const pair of pairs) {
+      const [key, value] = pair.split("=");
+      params[decodeURIComponent(key)] = decodeURIComponent(value.replace(/\+/g, " "));
     }
-  
-    const queryParams = getQueryParams();
-    const guestId = queryParams.id;
-    const guest = guests.find(g => g.id === guestId);
-  
-    const confirmButton = document.getElementById("confirm-button");
-  
-    if (guest) {
-      // Mostrar nombre e info en pantalla (si aplica)
-      document.getElementById('guest-name').textContent = `¡${guest.name}, ${
-        guest.passes > 1 ? 'están invitados' : 'estás invitado'
-      }!`;
-      document.getElementById('passes').textContent = `${guest.passes} ${guest.passes === 1 ? 'pase' : 'pases'}`;
-  
-      // Construir link dinámico del Google Form
-      const baseFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfPPRxK8SrwJycR4DCh9LJgQLGa9OX8vX3uA1xm7f0AAJM2lg/viewform?usp=pp_url";
-      const formUrl = `${baseFormUrl}&entry.42292443=${encodeURIComponent(guest.name)}&entry.800985369=${guest.passes}`;
-      
-      // Cambiar la acción del botón
-      confirmButton.addEventListener("click", function() {
-        window.open(formUrl, "_blank");
-      });
-  
-    } else {
-      document.getElementById('guest-name').textContent = `¡Invitado no encontrado!`;
-      document.querySelector('.invitation-info-section').style.display = 'none';
-      confirmButton.style.display = "none";
-    }
-  });
+    return params;
+  }
+
+  const queryParams = getQueryParams();
+  const guestId = queryParams.id;
+  const guest = guests.find(g => g.id === guestId);
+  const confirmButton = document.getElementById("confirm-button");
+
+  if (guest) {
+    // Detección aproximada de género por nombre
+    const nameLower = guest.name.toLowerCase();
+    const likelyFemale =
+      nameLower.includes("maria") ||
+      nameLower.includes("ana") ||
+      nameLower.includes("ella") ||
+      nameLower.includes("josseline") ||
+      nameLower.includes("marcela") ||
+      nameLower.includes("aracely") ||
+      nameLower.includes("susy") ||
+      nameLower.includes("gloria") ||
+      nameLower.includes("clarisa") ||
+      nameLower.includes("paola") ||
+      nameLower.includes("ivette") ||
+      nameLower.includes("emilia") ||
+      nameLower.includes("karen") ||
+      nameLower.includes("melany") ||
+      nameLower.includes("alicia") ||
+      nameLower.includes("sofia") ||
+      nameLower.includes("vanesa") ||
+      nameLower.includes("ashley") ||
+      nameLower.includes("mirna") ||
+      nameLower.includes("elisa") ||
+      nameLower.includes("esmeralda") ||
+      nameLower.includes("minely") ||
+      nameLower.includes("luz") ||
+      nameLower.includes("sonia") ||
+      nameLower.includes("sahily") ||
+      nameLower.includes("katerine");
+
+    // Texto dinámico según género y cantidad de pases
+    const invitacionTexto =
+      guest.passes > 1
+        ? "están invitados"
+        : likelyFemale
+        ? "estás invitada"
+        : "estás invitado";
+
+    // Mostrar datos
+    document.getElementById("guest-name").textContent = `¡${guest.name}, ${invitacionTexto}!`;
+    document.getElementById("passes").textContent = `${guest.passes} ${guest.passes === 1 ? "pase" : "pases"}`;
+
+    // Construir link dinámico del Google Form
+    const baseFormUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfPPRxK8SrwJycR4DCh9LJgQLGa9OX8vX3uA1xm7f0AAJM2lg/viewform?usp=pp_url";
+    const formUrl = `${baseFormUrl}&entry.42292443=${encodeURIComponent(guest.name)}&entry.800985369=${guest.passes}`;
+
+    confirmButton.addEventListener("click", function() {
+      window.open(formUrl, "_blank");
+    });
+  } else {
+    document.getElementById("guest-name").textContent = `¡Invitado no encontrado!`;
+    document.querySelector(".invitation-info-section").style.display = "none";
+    confirmButton.style.display = "none";
+  }
+});
