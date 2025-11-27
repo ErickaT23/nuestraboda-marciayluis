@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
       nameLower.includes("sonia") ||
       nameLower.includes("sahily") ||
       nameLower.includes("Julia") ||
-      nameLower.includes("Gabriela") ||
+      nameLower.includes("gabriela") ||
       nameLower.includes("katerine");
 
     // Texto dinámico según género y cantidad de pases
