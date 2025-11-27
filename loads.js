@@ -90,7 +90,8 @@ const guests = [
   { id: "89", name: "Sahily Loaiza", passes: 1 },
   { id: "90", name: "Mirna Castillo", passes: 1 },
   { id: "91", name: "Alicia Martínez", passes: 1 },
-  { id: "92", name: "Katerine Arana", passes: 1 }
+  { id: "92", name: "Katerine Arana", passes: 1 },
+  { id: "93", name: "Victor Salguero", passes: 1 }
 ];
 
 
