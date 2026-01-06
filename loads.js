@@ -97,7 +97,11 @@ const guests = [
   { id: "96", name: "Abraham Aguilar y Esposa", passes: 2 },
   { id: "97", name: "Ximena Fuentes", passes: 1 },
   { id: "98", name: "René Hernández y Esposa", passes: 2 },
-  { id: "99", name: "Astrid Gasparico", passes: 1 }
+  { id: "99", name: "Astrid Gasparico", passes: 1 },
+  { id: "100", name: "⁠Miguel Ríos y Esposa", passes: 2 },
+  { id: "101", name: "Shuenfeld Lópe", passes: 1},
+  { id: "102", name: "⁠Julissa y David Florian", passes: 2}
+
 ];
 
 
