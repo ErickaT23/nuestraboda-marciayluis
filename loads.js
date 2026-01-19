@@ -171,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
       nameLower.includes("ivonne") ||
       nameLower.includes("leticia") ||
       nameLower.includes("gimena") ||
+      nameLower.includes("yanci") ||
       nameLower.includes("katerine");
 
     // Texto dinámico según género y cantidad de pases
