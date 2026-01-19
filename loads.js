@@ -108,7 +108,10 @@ const guests = [
   { id: "107", name: "Lourdes Valladares ", passes: 1},
   { id: "108", name: "Ivonne Gómez", passes: 1},
   { id: "109", name: "Leticia Fajardo", passes: 1},
-  { id: "110", name: "Karla Chinchilla ", passes: 1}
+  { id: "110", name: "Karla Chinchilla ", passes: 1},
+  { id: "111", name: "Gimena López", passes: 1},
+  { id: "112", name: "Yanci Ramírez", passes: 1}
+
 ];
 
 
@@ -167,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function() {
       nameLower.includes("lourdes") ||
       nameLower.includes("ivonne") ||
       nameLower.includes("leticia") ||
+      nameLower.includes("gimena") ||
       nameLower.includes("katerine");
 
     // Texto dinámico según género y cantidad de pases
